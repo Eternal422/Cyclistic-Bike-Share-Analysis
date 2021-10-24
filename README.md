@@ -43,7 +43,8 @@ There is tripdata from 2003 to August 2021.
 
 ## Data Visualization
 
-        - We then finally perform the Visualization in Tableau of :
+We then finally perform the Visualization in Tableau of :
+        
         - Subscription Growth over time.
         - Subscription Distribution based on the Day.
         - Total Yearly Subscription
