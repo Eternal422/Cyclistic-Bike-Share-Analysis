@@ -181,3 +181,39 @@ SELECT member_casual AS Membership_Type,COUNT(member_casual) as members
 FROM Trip_CTE
 WHERE duration >= 0 
 GROUP BY member_casual
+
+--Average Duration of Subscription
+WITH Trip_CTE (Ride_id,rideable_type, start_date, end_date, duration, member_casual) 
+AS
+(
+SELECT Ride_id,rideable_type, start_date, end_date,DATEDIFF_BIG( MINUTE , start_date , end_date) AS duration, member_casual
+FROM Divvy_trips..New_Trips
+)
+SELECT member_casual AS Membership_Type,AVG(duration) as Average_duration
+FROM Trip_CTE
+WHERE duration >= 0 
+GROUP BY member_casual
+
+--Maximum Duration of Subscription
+WITH Trip_CTE (Ride_id,rideable_type, start_date, end_date, duration, member_casual) 
+AS
+(
+SELECT Ride_id,rideable_type, start_date, end_date,DATEDIFF_BIG( MINUTE , start_date , end_date) AS duration, member_casual
+FROM Divvy_trips..New_Trips
+)
+SELECT member_casual AS Membership_Type,Max(duration) as Maximum_duration
+FROM Trip_CTE
+WHERE duration >= 0 
+GROUP BY member_casual
+
+--Minimum Duration of Subscription
+WITH Trip_CTE (Ride_id,rideable_type, start_date, end_date, duration, member_casual) 
+AS
+(
+SELECT Ride_id,rideable_type, start_date, end_date,DATEDIFF_BIG( MINUTE , start_date , end_date) AS duration, member_casual
+FROM Divvy_trips..New_Trips
+)
+SELECT member_casual AS Membership_Type,Min(duration) as Minimum_duration
+FROM Trip_CTE
+WHERE duration >= 0 
+GROUP BY member_casual
