@@ -11,6 +11,7 @@
 ## The data used here and our data sources
 
 The dataset used: https://divvy-tripdata.s3.amazonaws.com/index.html
+
 There is tripdata from 2003 to August 2021.
 
 | Variable                     | Description                                                                                                                                                                                                                                |
