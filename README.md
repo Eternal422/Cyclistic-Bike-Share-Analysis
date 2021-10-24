@@ -32,7 +32,7 @@ There is tripdata from 2003 to August 2021.
 
 ## Data Cleaning & Data Analysis
 
-- We start by Finding the Total Data Present which is 6422279.
+- We start by Finding the Total Data Present which is 6,422,279.
 - We then check the no. of Annual Members and no. of Casual Members
 - Seeing that the sum of both the member type is lesser then the total data we filter the irrelevant Data out.
 - We then Delete the junk Data.
